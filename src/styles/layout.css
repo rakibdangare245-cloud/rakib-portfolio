@@ -65,3 +65,17 @@
     order: 0;
   }
 }
+/* ------------------------------------------------------------
+   Developer Reveal -- two-image row
+   Stacked on mobile, two columns from 900px up.
+   ------------------------------------------------------------ */
+@media (min-width: 900px) {
+  .reveal-portraits {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    gap: var(--space-6) !important;
+    align-items: start;
+  }
+  .reveal-hands {
+    margin-top: var(--space-9) !important;
+  }
+}

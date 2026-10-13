@@ -56,3 +56,12 @@ Chronological log of completed work, current status, and known issues.
 - Session storage key "ravex:intro-played" prevents replay within a session.
 - Reduced-motion users skip the intro entirely.
 - Hero content fades up via GSAP once the intro completes or is skipped.
+
+### 2026-10-13 -- Phase 10 complete
+
+- Installed three, @react-three/fiber, @react-three/drei, lenis, @types/three.
+- Created src/hooks/useLenisSmoothScroll.ts (Lenis + GSAP ticker + ScrollTrigger sync).
+- Mounted Lenis in AppShell via the hook.
+- Disabled CSS scroll-behavior: smooth; Lenis owns scrolling now.
+- Reduced-motion users get native scroll, no Lenis instance.
+- Bundle grew to 538 kB / 178 kB gzip. Will code-split in Phase 11.
