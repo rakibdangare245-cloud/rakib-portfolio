@@ -1,0 +1,43 @@
+/* ============================================================
+   Ravex Technology — Layout helpers specific to components
+   ============================================================ */
+
+/* Mobile-first: hide desktop nav, show the hamburger toggle. */
+.nav-desktop {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+}
+
+.nav-toggle:hover {
+  background: var(--color-bg-2);
+}
+
+/* From 900px up: show the desktop nav, hide the toggle. */
+@media (min-width: 900px) {
+  .nav-desktop {
+    display: flex;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}
+
+/* Section spacing rhythm */
+.section {
+  padding-block: clamp(4rem, 10vw, 8rem);
+}
+
+.section--opening {
+  padding-block: clamp(5rem, 14vw, 10rem);
+}

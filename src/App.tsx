@@ -1,18 +1,19 @@
+import { BrowserRouter } from "react-router-dom";
+import AppShell from "@/components/layout/AppShell";
+import AppRoutes from "@/app/router";
+
 /**
- * Temporary App placeholder for Phase 4.
- * Will be replaced with the real layout shell in Phase 5.
+ * Root application component.
+ *
+ * Wires the router and global layout shell together. Individual pages
+ * live under `src/app/` and stack the section components.
  */
 export default function App() {
   return (
-    <main className="container" style={{ paddingBlock: "var(--space-9)" }}>
-      <p className="text-eyebrow">RAVEX TECHNOLOGY</p>
-      <h1 style={{ marginTop: "var(--space-3)" }}>
-        Design system loaded.
-      </h1>
-      <p className="text-lead" style={{ marginTop: "var(--space-4)" }}>
-        Phase 4 is in place. Sections, navigation, and cinematic scenes
-        arrive in Phase 5 onward.
-      </p>
-    </main>
+    <BrowserRouter>
+      <AppShell>
+        <AppRoutes />
+      </AppShell>
+    </BrowserRouter>
   );
 }
