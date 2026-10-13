@@ -25,3 +25,14 @@ Chronological log of completed work, current status, and known issues.
 - **Do not run `npm audit fix --force` on this project.** It silently upgraded Vitest 3 -> 5 in a previous run. Any future vulnerability must be handled with a deliberate, reviewed change.
 - `package.json` currently has `\u0026` instead of `&&` in the build script due to a PowerShell ConvertTo-Json round-trip. Will be fixed in Step 3.4.
 - Vite template produced unexpected files: `public/favicon.svg`, `public/icons.svg`, `src/assets/hero.png`. To be inspected in Step 4 before deletion.
+
+### 2026-10-13 -- Phase 6 complete
+
+- Created src/types/portfolio.ts with shared asset, skill, project types.
+- Created src/data/imageManifest.ts with all 20 asset IDs from the master prompt.
+  Every entry starts as status: "pending". Update to "present" as files are added.
+- Created src/hooks/useImagePreload.ts (preloads critical/high priority only).
+- Created src/components/media/AssetImage.tsx with designed placeholder fallback.
+- Created src/components/media/CinematicVideo.tsx for future Google Flow clips.
+- Wired AssetImage into OpeningScene as the first integration test.
+- Added .hero-grid and .hero-portrait CSS rules to src/styles/layout.css.

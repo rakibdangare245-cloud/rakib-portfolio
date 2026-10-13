@@ -1,5 +1,5 @@
 /* ============================================================
-   Ravex Technology — Layout helpers specific to components
+   Ravex Technology -- Layout helpers specific to components
    ============================================================ */
 
 /* Mobile-first: hide desktop nav, show the hamburger toggle. */
@@ -40,4 +40,28 @@
 
 .section--opening {
   padding-block: clamp(5rem, 14vw, 10rem);
+}
+
+/* ------------------------------------------------------------
+   Hero grid
+   Stacked on mobile, two columns from 900px up.
+   ------------------------------------------------------------ */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.hero-portrait {
+  order: -1;
+}
+
+@media (min-width: 900px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  }
+  .hero-portrait {
+    order: 0;
+  }
 }
