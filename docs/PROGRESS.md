@@ -1,4 +1,4 @@
-﻿# Ravex Technology Portfolio — Progress Log
+# Ravex Technology Portfolio — Progress Log
 
 Chronological log of completed work, current status, and known issues.
 

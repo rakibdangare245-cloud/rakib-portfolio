@@ -1,4 +1,4 @@
-﻿# Ravex Technology Portfolio — Asset Manifest
+# Ravex Technology Portfolio — Asset Manifest
 
 Maps stable asset IDs to file paths, alt text, focal points, and availability status.
 

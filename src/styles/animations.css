@@ -1,0 +1,62 @@
+/* ============================================================
+   Ravex Technology — Animation Primitives
+   Lightweight keyframes used by CSS-only effects.
+   GSAP / Motion handle scene-level choreography elsewhere.
+   ============================================================ */
+
+@keyframes ravex-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes ravex-fade-up {
+  from { opacity: 0; transform: translate3d(0, 16px, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes ravex-pulse-soft {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.55; }
+}
+
+@keyframes ravex-line-sweep {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@keyframes ravex-glow-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 var(--color-accent-glow); }
+  50%      { box-shadow: 0 0 24px 2px var(--color-accent-glow); }
+}
+
+/* Utility classes */
+.fade-in {
+  animation: ravex-fade-in var(--duration-slow) var(--ease-out) both;
+}
+
+.fade-up {
+  animation: ravex-fade-up var(--duration-slow) var(--ease-out) both;
+}
+
+.line-sweep {
+  transform-origin: left center;
+  animation: ravex-line-sweep var(--duration-scene) var(--ease-out) both;
+}
+
+/* Reduced-motion: eliminate all non-essential motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .fade-in,
+  .fade-up,
+  .line-sweep {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

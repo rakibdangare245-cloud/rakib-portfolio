@@ -1,4 +1,4 @@
-﻿# Ravex Technology Portfolio — Deployment
+# Ravex Technology Portfolio — Deployment
 
 Filled in at Phase 20. Placeholders only for now.
 

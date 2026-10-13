@@ -1,4 +1,4 @@
-﻿# Ravex Technology Portfolio — Build Plan
+# Ravex Technology Portfolio — Build Plan
 
 Single source of truth for the phased build of the cinematic portfolio.
 

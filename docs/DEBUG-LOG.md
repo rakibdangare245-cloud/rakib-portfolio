@@ -1,4 +1,4 @@
-﻿# Ravex Technology Portfolio — Debug Log
+# Ravex Technology Portfolio — Debug Log
 
 Record every real bug, its root cause, the fix, and the verification command.
 
@@ -31,3 +31,10 @@ Record every real bug, its root cause, the fix, and the verification command.
 - Impact: Vitest and @vitest/ui moved from v3 to v5 with no test files present. No breakage observed.
 - Decision: Accept v5 for now, since there are no tests yet and v5 is stable with Vite 8. Re-evaluate if issues arise.
 - Prevention: Do not run any npm audit fix --force on this project. Handle vulnerabilities individually.
+
+### 2026-10-13 — UTF-8 BOM in package.json broke Vite's PostCSS config loader
+
+- Symptom: Vite dev server showed "Failed to load PostCSS config ... Unexpected token ''".
+- Root cause: Windows PowerShell 5.1's `Set-Content -Encoding utf8` prepends a UTF-8 BOM (bytes EF BB BF). Vite parses package.json with strict JSON.parse, which rejects the BOM.
+- Fix: Scanned all project text files for a leading BOM, stripped bytes 0..2 where present, and rewrote the file with `[System.IO.File]::WriteAllBytes`. Verified package.json starts with byte 123 (the "{" character).
+- Prevention: Do NOT use `Set-Content -Encoding utf8` in this project. Use `[System.IO.File]::WriteAllText($path, $content, (New-Object System.Text.UTF8Encoding $false))` instead.

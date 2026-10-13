@@ -1,0 +1,123 @@
+/* ============================================================
+   Ravex Technology — Design Tokens
+   Single source of truth for color, spacing, type, motion.
+   ============================================================ */
+
+:root {
+  /* ---------- Color: backgrounds ---------- */
+  --color-bg-0: #05060a;          /* deepest black — page root */
+  --color-bg-1: #0a0c12;          /* primary surface */
+  --color-bg-2: #11141c;          /* raised surface */
+  --color-bg-3: #171b25;          /* cards, panels */
+  --color-bg-overlay: rgba(5, 6, 10, 0.72);
+
+  /* ---------- Color: text ---------- */
+  --color-text-primary: #f4f5f7;
+  --color-text-secondary: #b8bcc7;
+  --color-text-tertiary: #7c8290;
+  --color-text-inverse: #0a0c12;
+
+  /* ---------- Color: borders & dividers ---------- */
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+  --color-border: rgba(255, 255, 255, 0.10);
+  --color-border-strong: rgba(255, 255, 255, 0.18);
+
+  /* ---------- Color: accent (electric cyan) ---------- */
+  --color-accent: #22d3ee;
+  --color-accent-dim: #0e7490;
+  --color-accent-bright: #67e8f9;
+  --color-accent-glow: rgba(34, 211, 238, 0.35);
+  --color-accent-soft: rgba(34, 211, 238, 0.12);
+
+  /* ---------- Color: cinematic lighting ---------- */
+  --color-metal-blue: #3b6ea5;
+  --color-metal-red: #b91c1c;
+  --color-warm: #e8b687;
+
+  /* ---------- Color: semantic ---------- */
+  --color-success: #34d399;
+  --color-warning: #fbbf24;
+  --color-danger:  #f87171;
+
+  /* ---------- Typography ---------- */
+  --font-sans: "Inter", ui-sans-serif, system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
+
+  /* Fluid type scale (clamp: min, preferred, max) */
+  --fs-xs:   clamp(0.75rem,  0.72rem + 0.15vw, 0.8125rem);
+  --fs-sm:   clamp(0.875rem, 0.84rem + 0.18vw, 0.9375rem);
+  --fs-base: clamp(1rem,     0.96rem + 0.20vw, 1.0625rem);
+  --fs-lg:   clamp(1.125rem, 1.06rem + 0.32vw, 1.25rem);
+  --fs-xl:   clamp(1.375rem, 1.25rem + 0.60vw, 1.75rem);
+  --fs-2xl:  clamp(1.75rem,  1.50rem + 1.10vw, 2.5rem);
+  --fs-3xl:  clamp(2.25rem,  1.80rem + 2.00vw, 3.5rem);
+  --fs-4xl:  clamp(3rem,     2.20rem + 3.40vw, 5rem);
+  --fs-5xl:  clamp(3.75rem,  2.60rem + 5.00vw, 6.5rem);
+
+  --lh-tight: 1.05;
+  --lh-snug:  1.2;
+  --lh-base:  1.6;
+  --lh-loose: 1.75;
+
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;
+  --tracking-wider: 0.12em;
+
+  /* ---------- Spacing (8px base) ---------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  /* ---------- Layout ---------- */
+  --container-narrow: 48rem;
+  --container: 72rem;
+  --container-wide: 90rem;
+  --container-pad: clamp(1rem, 4vw, 3rem);
+
+  /* ---------- Radii ---------- */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 999px;
+
+  /* ---------- Shadows ---------- */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.55);
+  --shadow-accent: 0 0 40px var(--color-accent-glow);
+
+  /* ---------- Motion ---------- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-emphasized: cubic-bezier(0.32, 0.72, 0, 1);
+
+  --duration-fast: 150ms;
+  --duration-base: 260ms;
+  --duration-slow: 480ms;
+  --duration-scene: 900ms;
+
+  /* ---------- Z-index scale ---------- */
+  --z-base: 0;
+  --z-raised: 10;
+  --z-sticky: 100;
+  --z-nav: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+
+  /* ---------- Blur ---------- */
+  --blur-sm: 6px;
+  --blur-md: 14px;
+  --blur-lg: 28px;
+}

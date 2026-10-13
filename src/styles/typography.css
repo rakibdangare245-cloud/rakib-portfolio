@@ -1,0 +1,131 @@
+/* ============================================================
+   Ravex Technology — Typography
+   Applies the token type scale to semantic elements.
+   ============================================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--color-text-primary);
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--lh-snug);
+  text-wrap: balance;
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--fs-4xl);
+  line-height: var(--lh-tight);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--fs-3xl);
+  line-height: var(--lh-tight);
+}
+
+h3 {
+  font-size: var(--fs-2xl);
+}
+
+h4 {
+  font-size: var(--fs-xl);
+}
+
+h5 {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+}
+
+h6 {
+  font-size: var(--fs-base);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+p {
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+  color: var(--color-text-secondary);
+  text-wrap: pretty;
+  margin: 0;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+a:hover {
+  color: var(--color-accent-bright);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-xs);
+}
+
+strong, b {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+small {
+  font-size: var(--fs-sm);
+  color: var(--color-text-tertiary);
+}
+
+code, pre, kbd, samp {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+}
+
+code {
+  background: var(--color-bg-2);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 0.1em 0.35em;
+  color: var(--color-accent-bright);
+}
+
+pre {
+  background: var(--color-bg-1);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  overflow-x: auto;
+  line-height: var(--lh-base);
+}
+
+/* Utility type classes used by section components */
+.text-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.text-lead {
+  font-size: var(--fs-lg);
+  line-height: var(--lh-base);
+  color: var(--color-text-secondary);
+  text-wrap: pretty;
+}
+
+.text-muted {
+  color: var(--color-text-tertiary);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}

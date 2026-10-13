@@ -1,4 +1,4 @@
-﻿# Ravex Technology Portfolio — Animation Map
+# Ravex Technology Portfolio — Animation Map
 
 Documents every GSAP timeline, ScrollTrigger, and Motion component.
 
