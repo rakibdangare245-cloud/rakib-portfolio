@@ -1,7 +1,9 @@
 /**
  * Helpers for cleaning up GSAP animations across React lifecycles.
+ *
+ * Note: `gsap.core.Timeline` below resolves via the global ambient
+ * namespace declared in gsap's own type definitions. No import needed.
  */
-import type { gsap } from "./gsap";
 import { ScrollTrigger } from "./gsap";
 
 /**
@@ -31,7 +33,9 @@ export function killScrollTriggersIn(root: HTMLElement | null): void {
 /**
  * Kill a single GSAP timeline and its ScrollTrigger.
  */
-export function killTimeline(tl: gsap.core.Timeline | null | undefined): void {
+export function killTimeline(
+  tl: gsap.core.Timeline | null | undefined,
+): void {
   if (!tl) return;
   tl.scrollTrigger?.kill();
   tl.kill();
