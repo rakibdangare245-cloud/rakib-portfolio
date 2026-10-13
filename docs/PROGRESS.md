@@ -36,3 +36,14 @@ Chronological log of completed work, current status, and known issues.
 - Created src/components/media/CinematicVideo.tsx for future Google Flow clips.
 - Wired AssetImage into OpeningScene as the first integration test.
 - Added .hero-grid and .hero-portrait CSS rules to src/styles/layout.css.
+
+### 2026-10-13 -- Phase 7 complete
+
+- Extended src/lib/gsap.ts with BREAKPOINTS and gsapMatchMedia helper.
+- Created src/lib/latestRef.ts (React 19-safe ref sync, no write during render).
+- Created src/hooks/useMediaQuery.ts.
+- Created src/hooks/useGSAPContext.ts (wraps gsap.context with cleanup).
+- Created src/hooks/useScrollProgress.ts.
+- Created src/components/motion/Reveal.tsx.
+- Created src/components/motion/Stagger.tsx with StaggerItem.
+- Created src/components/motion/RevealText.tsx as a Phase 8 placeholder.
