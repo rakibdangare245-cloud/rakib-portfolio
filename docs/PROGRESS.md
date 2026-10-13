@@ -47,3 +47,12 @@ Chronological log of completed work, current status, and known issues.
 - Created src/components/motion/Reveal.tsx.
 - Created src/components/motion/Stagger.tsx with StaggerItem.
 - Created src/components/motion/RevealText.tsx as a Phase 8 placeholder.
+
+### 2026-10-13 -- Phase 8 complete
+
+- Created src/components/ui/SkipButton.tsx (accessible skip control).
+- Created src/components/motion/IntroSequence.tsx (GSAP overlay, ~1.6s runtime).
+- Rewrote src/sections/OpeningScene.tsx to gate the intro at the parent level.
+- Session storage key "ravex:intro-played" prevents replay within a session.
+- Reduced-motion users skip the intro entirely.
+- Hero content fades up via GSAP once the intro completes or is skipped.

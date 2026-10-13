@@ -28,3 +28,23 @@ Documents every GSAP timeline, ScrollTrigger, and Motion component.
 
 - Navigation — Motion for mobile menu open/close.
 - RouteTransition — Motion fade between pages.
+
+## Implemented Sequences (Phase 8)
+
+### OpeningScene -- Intro overlay
+
+- Library: GSAP (via useGSAPContext).
+- Trigger: mount, gated by sessionStorage and reduced-motion.
+- Targets: .intro-panel, .intro-wordmark, .intro-line.
+- Runtime: approximately 1.6 seconds.
+- Skip control: SkipButton, cancels the timeline and snaps to final state.
+- Reduced-motion behavior: intro does not mount at all.
+
+### OpeningScene -- Hero reveal
+
+- Library: GSAP (via useGSAPContext).
+- Trigger: introDone state change.
+- Targets: .hero-copy, .hero-portrait.
+- Runtime: 0.7s with 0.08s stagger.
+- Reduced-motion behavior: same reveal, but reduced-motion CSS already
+  zeroes transition durations; the fade is a direct set.
